@@ -2,7 +2,7 @@
 
 import pygame
 import sys
-from src.player import Player
+from player import Player
 from game_functions import *
 
 
@@ -33,7 +33,8 @@ def main():
             if event.type == pygame.QUIT:
                 running = False 
         screen.fill(WHITE)
-        draw(screen, player.image)
+        
+        draw(screen, (player.image))
         pygame.display.update()
     
     pygame.quit()

@@ -1,5 +1,6 @@
 import pygame
-from src.settings import *
+from settings import *
+
 
 ## Define player class
 
