@@ -1,12 +1,13 @@
-## import pygame
+## imports
 
 import pygame
-
-## import sys
-
 import sys
+from src.player import Player
+from game_functions import *
 
-## import settings
+
+
+
 
 from settings import *
 
@@ -19,6 +20,10 @@ pygame.init()
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 
+# define our player
+
+player: Player = Player(GREEN, 50, 30)
+
 ## main function
 
 def main():
@@ -28,6 +33,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False 
         screen.fill(WHITE)
+        draw(screen, player.image)
         pygame.display.update()
     
     pygame.quit()
